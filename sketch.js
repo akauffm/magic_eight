@@ -28,17 +28,11 @@ var sketch = function( p, p5sketch ) {
 
   p.deviceTurned = function() {
   if (turnAxis == 'Z'){
-    p.mouseReleased();
-  }
-};
-
-  p.mouseReleased = function() {
-
-  	var result = grammar.expand();
+    var result = grammar.expand();
   	var haiku = result.split("%");
   	for (var i = 0; i < lines.length; i++)
   		lines[i] = haiku[i];
-  };
+  }
 };
 
 var myp5 = new p5(sketch);
