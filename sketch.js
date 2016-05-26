@@ -9,8 +9,8 @@ var sketch = function( p, p5sketch ) {
   };
 
   p.setup = function() {
-    p.createCanvas(700, 410);
-    p.textSize(20);
+    p.createCanvas(1600, 2000);
+    p.textSize(80);
     p.fill(255);
     p.textAlign(p.CENTER);
     p.noStroke();
@@ -25,6 +25,12 @@ var sketch = function( p, p5sketch ) {
   	p.text(lines[2], p.width/2, 145);
 
   };
+
+
+  p.mousePressed = function() {
+    var fs = p.fullscreen();
+    p.fullscreen(!fs);
+};
 
   p.deviceTurned = function() {
   if (p.turnAxis == 'Z'){
