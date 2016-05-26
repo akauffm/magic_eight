@@ -27,7 +27,7 @@ var sketch = function( p, p5sketch ) {
   };
 
   p.deviceTurned = function() {
-  if (turnAxis == 'Z'){
+  if (p.turnAxis == 'Z'){
     var result = grammar.expand();
   	var haiku = result.split("%");
   	for (var i = 0; i < lines.length; i++)
