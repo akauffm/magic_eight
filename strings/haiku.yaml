@@ -1,0 +1,9 @@
+---
+<start>: <5-line> % <7-line> % <5-line>
+<5-line>: <1> <4> |<1> <3> <1> |<1> <1> <3> | <1> <2> <2> | <1> <2> <1> <1> | <1> <1> <2> <1> | <1> <1> <1> <2> | <1> <1> <1> <1> <1> | <2> <3> | <2> <2> <1> | <2> <1> <2> | <2> <1> <1> <1> | <3> <2> | <3> <1> <1> | <4> <1> | <5>
+<7-line>: <1> <1> <5-line> | <2> <5-line> | <5-line> <1> <1> | <5-line> <2>
+<1>: blue | white | black | sky | dawns | breaks | falls | grass | rain | code | my | your | our | sun | clouds | car | green | night | day | dawn | dusk | fly | branch | through | surf | zen | smile | gray | wave | sea | through | sound | mind | smoke | shark | fish
+<2>: dog poop | bike lane | windy | traffic | tech bros | facebook | commute | mountains | skyline | city | faces | toward | empty | hipsters | under | ocean | thinking | zooming | rushing | over | homeless | rising | falling | sparkling | man bun
+<3>: sunrises | pilates | Google bus | 101 | 280 | Mill Valley | lsd | C++ | Python | people farms | compiler | code ninja | Soul Cycle | sailing boats | far away | yoga pants | evenings | pleasant rain 
+<4>: home schooling | waxed mustache | never again | around Berkeley | west of the sun | not fixing bugs | crazy steep hills | gridlocked in cars
+<5>: restitutional | appreciated | rolling foothills rise | toward mountains higher | out over this city | in the springtime again | East Palo Alto | feature not a bug
