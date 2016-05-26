@@ -24,7 +24,7 @@ var sketch = function( p, p5sketch ) {
   	p.text(lines[1], p.width/2, 110);
   	p.text(lines[2], p.width/2, 145);
 
-  }
+  };
 
   p.deviceTurned = function() {
   if (turnAxis == 'Z'){
@@ -33,6 +33,7 @@ var sketch = function( p, p5sketch ) {
   	for (var i = 0; i < lines.length; i++)
   		lines[i] = haiku[i];
   }
+};
 };
 
 var myp5 = new p5(sketch);
