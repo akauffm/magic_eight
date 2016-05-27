@@ -21,7 +21,7 @@ var sketch = function(p) {
   };
 
   p.draw = function() {
-  	p.background(100);
+  	p.background(0);
   	p.text(lines[0], p.width/2, 75);
   	p.text(lines[1], p.width/2, 110);
   	p.text(lines[2], p.width/2, 145);
