@@ -18,7 +18,7 @@ var sketch = function(p) {
     p.textAlign(p.CENTER);
     p.noStroke();
     grammar = new RiGrammar(yaml.join('\n'));
-    lines = [" ", " ", " "];
+    generatePoem();
   };
 
   p.draw = function() {
@@ -29,18 +29,19 @@ var sketch = function(p) {
 
   };
 
+  var generatePoem = function() {
+  	var result = grammar.expand();
+  	var haiku = result.split("%");
+  	for (var i = 0; i < lines.length; i++)
+  		lines[i] = haiku[i];
+  };
 
   p.mousePressed = function() {
     if (!p.fullscreen()) p.fullscreen(true);
 };
 
   p.deviceTurned = function() {
-  if (p.turnAxis == 'Z'){
-    var result = grammar.expand();
-  	var haiku = result.split("%");
-  	for (var i = 0; i < lines.length; i++)
-  		lines[i] = haiku[i];
-  }
+  	generatePoem();
 };
 };
 
