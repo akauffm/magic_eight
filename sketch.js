@@ -12,6 +12,7 @@ var sketch = function(p) {
     var canvas = p.createCanvas(650, 200);
     canvas.class("displayed");
     canvas.parent('p5sketch');
+    p.select('defaultCanvas0').style("visibility","visible");
     p.textSize(30);
     p.fill(255);
     p.textAlign(p.CENTER);
