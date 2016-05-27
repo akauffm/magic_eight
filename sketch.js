@@ -9,11 +9,11 @@ var sketch = function(p) {
   };
 
   p.setup = function() {
-    var canvas = p.createCanvas(650, 200);
+    var canvas = p.createCanvas(550, 200);
     canvas.class("displayed");
     canvas.parent('p5sketch');
     p.select('canvas').style("visibility","visible");
-    p.textSize(30);
+    p.textSize(20);
     p.fill(255);
     p.textAlign(p.CENTER);
     p.noStroke();
@@ -24,8 +24,8 @@ var sketch = function(p) {
   p.draw = function() {
   	p.background(0);
   	p.text(lines[0], p.width/2, 75);
-  	p.text(lines[1], p.width/2, 110);
-  	p.text(lines[2], p.width/2, 145);
+  	p.text(lines[1], p.width/2, 100);
+  	p.text(lines[2], p.width/2, 125);
 
   };
 
