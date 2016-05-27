@@ -1,4 +1,4 @@
-var sketch = function( p, p5sketch ) {
+var sketch = function( p, sketch ) {
 
   var x = 100; 
   var y = 100;
