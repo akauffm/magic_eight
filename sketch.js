@@ -9,7 +9,8 @@ var sketch = function( p, p5sketch ) {
   };
 
   p.setup = function() {
-    p.createCanvas(500, 700);
+    var canvas = p.createCanvas(650, 200);
+    canvas.class("displayed");
     p.textSize(30);
     p.fill(255);
     p.textAlign(p.CENTER);
