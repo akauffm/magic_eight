@@ -9,8 +9,8 @@ var sketch = function( p, p5sketch ) {
   };
 
   p.setup = function() {
-    p.createCanvas(600, 1000);
-    p.textSize(80);
+    p.createCanvas(500, 700);
+    p.textSize(30);
     p.fill(255);
     p.textAlign(p.CENTER);
     p.noStroke();
@@ -20,9 +20,9 @@ var sketch = function( p, p5sketch ) {
 
   p.draw = function() {
   	p.background(0);
-  	p.text(lines[0], p.width/2, 175);
-  	p.text(lines[1], p.width/2, 310);
-  	p.text(lines[2], p.width/2, 545);
+  	p.text(lines[0], p.width/2, 75);
+  	p.text(lines[1], p.width/2, 110);
+  	p.text(lines[2], p.width/2, 145);
 
   };
 
