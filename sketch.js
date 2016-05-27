@@ -1,4 +1,4 @@
-var sketch = function( p, sketch ) {
+var sketch = function(p) {
 
   var x = 100; 
   var y = 100;
@@ -11,6 +11,7 @@ var sketch = function( p, sketch ) {
   p.setup = function() {
     var canvas = p.createCanvas(650, 200);
     canvas.class("displayed");
+    canvas.parent('p5sketch');
     p.textSize(30);
     p.fill(255);
     p.textAlign(p.CENTER);
@@ -20,7 +21,7 @@ var sketch = function( p, sketch ) {
   };
 
   p.draw = function() {
-  	p.background(0);
+  	p.background(100);
   	p.text(lines[0], p.width/2, 75);
   	p.text(lines[1], p.width/2, 110);
   	p.text(lines[2], p.width/2, 145);
