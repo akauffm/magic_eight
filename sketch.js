@@ -9,7 +9,7 @@ var sketch = function(p) {
   };
 
   p.setup = function() {
-    var canvas = p.createCanvas(550, 200);
+    var canvas = p.createCanvas(400, 200);
     canvas.class("displayed");
     canvas.parent('p5sketch');
     p.select('canvas').style("visibility","visible");
