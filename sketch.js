@@ -18,6 +18,7 @@ var sketch = function(p) {
     p.textAlign(p.CENTER);
     p.noStroke();
     grammar = new RiGrammar(yaml.join('\n'));
+    lines = [" ", " ", " "];
     generatePoem();
   };
 
