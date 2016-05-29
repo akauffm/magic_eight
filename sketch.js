@@ -65,7 +65,7 @@ var sketch = function(p) {
 };
 
   p.deviceTurned = function() {
-  	nextPoem(generatePoem);
+  	generatePoem();
 };
 };
 
