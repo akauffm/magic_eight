@@ -3,6 +3,9 @@ var sketch = function(p) {
   var x = 100; 
   var y = 100;
   var grammar, yaml, lines;
+  var animating = false;
+  var countdown = 0;
+  var alpha = 255;
 
   p.preload = function() {
   	yaml = p.loadStrings('strings/haiku.yaml');
@@ -23,6 +26,7 @@ var sketch = function(p) {
   };
 
   p.draw = function() {
+  	animate(countdown, alpha);
   	p.background(0);
   	p.text(lines[0], p.width/2, 75);
   	p.text(lines[1], p.width/2, 100);
@@ -30,19 +34,38 @@ var sketch = function(p) {
 
   };
 
+  var animate = function(_time,_alpha){
+  	if (countdown > 0 && alpha < 255) {
+  		countdown--;
+  		alpha += p.random(-2,5);
+  		p.fill(255,alpha);
+  		animating = true;
+  	}
+  	else {
+  		countdown = 0;
+  		alpha = 255;
+  		animating = false;
+  	}
+  };
+
   var generatePoem = function() {
-  	var result = grammar.expand();
-  	var haiku = result.split("%");
-  	for (var i = 0; i < lines.length; i++)
-  		lines[i] = haiku[i];
+  	if (!animating){
+	  	var result = grammar.expand();
+	  	var haiku = result.split("%");
+	  	for (var i = 0; i < lines.length; i++)
+	  		lines[i] = haiku[i];
+	  	countdown = 1000;
+	  	alpha = 0;
+  	}
   };
 
   p.mousePressed = function() {
     if (!p.fullscreen()) p.fullscreen(true);
+    //generatePoem();
 };
 
   p.deviceTurned = function() {
-  	generatePoem();
+  	nextPoem(generatePoem);
 };
 };
 
