@@ -59,9 +59,13 @@ var sketch = function(p) {
   	}
   };
 
-  p.mousePressed = function() {
-    if (!p.fullscreen()) p.fullscreen(true);
-    //generatePoem();
+  p.touchEnded = function() {
+  	if (!p.fullscreen()) p.fullscreen(true);
+  	return false;
+  };
+
+  p.mouseReleased = function() {
+  	generatePoem();
 };
 
   p.deviceTurned = function() {
